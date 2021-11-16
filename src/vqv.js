@@ -17,12 +17,12 @@
 */
 
 const vqv = (name, age) => {
-  const part1 = `Oi, meu nome é ${name}!\nTenho ${age} anos,\n`;
-  const part2 = `trabalho na Trybe e mando muito em programação!\n#VQV!`;
+  const part1 = 'Oi, meu nome é ' + name + '!\nTenho ' + age + ' anos,\n';
+  const part2 = 'trabalho na Trybe e mando muito em programação!\n#VQV!';
   let result;
   if (name && age) {
     result = part1 + part2;
-  };
+  }
   return result;
 };
 
