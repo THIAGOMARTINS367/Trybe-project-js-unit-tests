@@ -39,21 +39,23 @@ const calculator = (number1, number2) => {
     mult: number1 * number2,
     div: parseInt(number1 / number2),
     sub: number1 - number2,
-  }
-  return resultOperations
+  };
+  return resultOperations;
 };
 
 const arrayGenerator = (type, object) => {
   let keys = Object.keys(object);
   let values = Object.values(object);
   let entries = Object.entries(object);
+  let result = undefined;
   if (type === 'keys') {
-    return keys
+    result =  keys;
   } else if (type === 'values') {
-    return values
+    result = values;
   } else if (type === 'entries') {
-    return entries
+    result = entries;
   }
+  return result
 };
 
 module.exports = { calculator, arrayGenerator };
