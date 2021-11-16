@@ -63,9 +63,7 @@ const createMenu = (menu) => {
     }
     for (let index = 0; index < consumptions.length; index += 1) {
       for (let index2 = 0; index2 < keys.length; index2 += 1) {
-        if (consumptions[index] === keys[index2]) {
-          totalOrder += parseFloat(values[index2]);
-        }
+        totalOrder += consumptions[index] === keys[index2] ? parseFloat(values[index2]) : 0;
       }
     }
     totalOrder += totalOrder * 0.1;
@@ -103,3 +101,7 @@ module.exports = createMenu;
     // }
     // totalOrder += totalOrder * 0.1;
     // return totalOrder;
+
+    // if (consumptions[index] === keys[index2]) {
+    //   totalOrder += parseFloat(values[index2]);
+    // }
