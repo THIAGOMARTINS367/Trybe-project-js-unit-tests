@@ -58,12 +58,13 @@ const createMenu = (menu) => {
     const drinkValues = Object.values(meuRestaurante.menu.drink);
     let totalOrder = 0;
     for (let index = 0; index < drinkKeys.length; index += 1) {
-      keys.push(drinkKeys[index]);
-      values.push(drinkValues[index]);
+      keys.push(drinkKeys[index]) && values.push(drinkValues[index]);
     }
     for (let index = 0; index < consumptions.length; index += 1) {
       for (let index2 = 0; index2 < keys.length; index2 += 1) {
-        totalOrder += consumptions[index] === keys[index2] ? parseFloat(values[index2]) : 0;
+        if (consumptions[index] === keys[index2]) {
+          totalOrder += parseFloat(values[index2]);
+        }
       }
     }
     totalOrder += totalOrder * 0.1;
