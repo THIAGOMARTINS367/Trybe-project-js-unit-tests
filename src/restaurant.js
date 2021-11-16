@@ -47,9 +47,9 @@
 const meuRestaurante = {};
 const createMenu = (menu) => {
   meuRestaurante.menu = menu;
-  meuRestaurante.fetchMenu = () => {return meuRestaurante.menu};
+  meuRestaurante.fetchMenu = () => meuRestaurante.menu;
   meuRestaurante.consumption = [];
-  meuRestaurante.order = (product) => {meuRestaurante.consumption.push(product)};
+  meuRestaurante.order = (product) => meuRestaurante.consumption.push(product);
   meuRestaurante.pay = () => {
     const consumptions = meuRestaurante.consumption;
     const foodKeys = Object.keys(meuRestaurante.menu.food);
@@ -70,9 +70,9 @@ const createMenu = (menu) => {
       }
     }
     totalOrder += totalOrder * 0.1;
-    return totalOrder
+    return totalOrder;
   };
-  return meuRestaurante
+  return meuRestaurante;
 };
 
 // console.log(createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }));
