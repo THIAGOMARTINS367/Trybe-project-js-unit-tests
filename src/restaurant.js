@@ -52,20 +52,19 @@ const createMenu = (menu) => {
   meuRestaurante.order = (product) => meuRestaurante.consumption.push(product);
   meuRestaurante.pay = () => {
     const consumptions = meuRestaurante.consumption;
-    const foodKeys = Object.keys(meuRestaurante.menu.food);
-    const food = Object.entries(meuRestaurante.menu.food);
+    const keys = Object.keys(meuRestaurante.menu.food);
     const drinkKeys = Object.keys(meuRestaurante.menu.drink);
-    const drink = Object.entries(meuRestaurante.menu.drink);
+    const values = Object.values(meuRestaurante.menu.food);
+    const drinkValues = Object.values(meuRestaurante.menu.drink);
     let totalOrder = 0;
+    for (let index = 0; index < drinkKeys.length; index += 1) {
+      keys.push(drinkKeys[index]);
+      values.push(drinkValues[index]);
+    }
     for (let index = 0; index < consumptions.length; index += 1) {
-      for (let index2 = 0; index2 < foodKeys.length; index2 += 1) {
-        if (consumptions[index] === food[index2][0]) {
-          totalOrder += parseFloat(food[index2][1]);
-        }
-      }
-      for (let index3 = 0; index3 < drinkKeys.length; index3 += 1) {
-        if (consumptions[index] === drink[index3][0]) {
-          totalOrder += parseFloat(drink[index3][1]);
+      for (let index2 = 0; index2 < keys.length; index2 += 1) {
+        if (consumptions[index] === keys[index2]) {
+          totalOrder += parseFloat(values[index2]);
         }
       }
     }
@@ -83,5 +82,24 @@ const createMenu = (menu) => {
 // console.log(meuRestaurante.order('cerveja')) //6.9
 // console.log(meuRestaurante)
 // console.log(meuRestaurante.pay())
-
+// 28,05
 module.exports = createMenu;
+
+// const food = Object.entries(meuRestaurante.menu.food);
+    // const drinkKeys = Object.keys(meuRestaurante.menu.drink);
+    // const drink = Object.entries(meuRestaurante.menu.drink);
+    // let totalOrder = 0;
+    // for (let index = 0; index < consumptions.length; index += 1) {
+    //   for (let index2 = 0; index2 < foodKeys.length; index2 += 1) {
+    //     if (consumptions[index] === food[index2][0]) {
+    //       totalOrder += parseFloat(food[index2][1]);
+    //     }
+    //   }
+    //   for (let index2 = 0; index2 < drinkKeys.length; index2 += 1) {
+    //     if (consumptions[index] === drink[index2][0]) {
+    //       totalOrder += parseFloat(drink[index2][1]);
+    //     }
+    //   }
+    // }
+    // totalOrder += totalOrder * 0.1;
+    // return totalOrder;
