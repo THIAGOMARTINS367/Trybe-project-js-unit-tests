@@ -44,6 +44,44 @@
   
 */
 
-const createMenu = () => {};
+const meuRestaurante = {};
+const createMenu = (menu) => {
+  meuRestaurante.menu = menu;
+  meuRestaurante.fetchMenu = () => {return meuRestaurante.menu};
+  meuRestaurante.consumption = [];
+  meuRestaurante.order = (product) => {meuRestaurante.consumption.push(product)};
+  meuRestaurante.pay = () => {
+    const consumptions = meuRestaurante.consumption;
+    const foodKeys = Object.keys(meuRestaurante.menu.food);
+    const food = Object.entries(meuRestaurante.menu.food);
+    const drinkKeys = Object.keys(meuRestaurante.menu.drink);
+    const drink = Object.entries(meuRestaurante.menu.drink);
+    let totalOrder = 0;
+    for (let index = 0; index < consumptions.length; index += 1) {
+      for (let index2 = 0; index2 < foodKeys.length; index2 += 1) {
+        if (consumptions[index] === food[index2][0]) {
+          totalOrder += parseFloat(food[index2][1]);
+        }
+      }
+      for (let index3 = 0; index3 < drinkKeys.length; index3 += 1) {
+        if (consumptions[index] === drink[index3][0]) {
+          totalOrder += parseFloat(drink[index3][1]);
+        }
+      }
+    }
+    totalOrder += totalOrder * 0.1;
+    return totalOrder
+  };
+  return meuRestaurante
+};
+
+// console.log(createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }));
+// console.log(meuRestaurante.order('coxinha')) //3.9
+// console.log(meuRestaurante.order('coxinha')) //3.9
+// console.log(meuRestaurante.order('coxinha')) //3.9
+// console.log(meuRestaurante.order('cerveja')) //6.9
+// console.log(meuRestaurante.order('cerveja')) //6.9
+// console.log(meuRestaurante)
+// console.log(meuRestaurante.pay())
 
 module.exports = createMenu;
