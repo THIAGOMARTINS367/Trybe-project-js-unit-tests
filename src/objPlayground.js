@@ -34,11 +34,10 @@
 */
 
 const calculator = (number1, number2) => {
-  const div = parseInt(number1 / number2);
   const resultOperations = {
     sum: number1 + number2,
     mult: number1 * number2,
-    div: div,
+    div: 0 + parseInt(number1 / number2),
     sub: number1 - number2,
   };
   return resultOperations;
