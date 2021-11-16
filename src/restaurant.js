@@ -50,17 +50,26 @@ const createMenu = (menu) => {
   meuRestaurante.fetchMenu = () => meuRestaurante.menu;
   meuRestaurante.consumption = [];
   meuRestaurante.order = (product) => meuRestaurante.consumption.push(product);
+  
   meuRestaurante.pay = () => {
+    // const consumptions = meuRestaurante.consumption;
+    // const keys = Object.keys(meuRestaurante.menu.food);
+    // const drinkKeys = Object.keys(meuRestaurante.menu.drink);
+    // const values = Object.values(meuRestaurante.menu.food);
+    // const drinkValues = Object.values(meuRestaurante.menu.drink);
+    // let totalOrder = 0;
+    // for (let index = 0; index < drinkKeys.length; index += 1) {
+    //   keys.push(drinkKeys[index]);
+    //   values.push(drinkValues[index]);
+    // }
     const consumptions = meuRestaurante.consumption;
     const keys = Object.keys(meuRestaurante.menu.food);
     const drinkKeys = Object.keys(meuRestaurante.menu.drink);
     const values = Object.values(meuRestaurante.menu.food);
     const drinkValues = Object.values(meuRestaurante.menu.drink);
     let totalOrder = 0;
-    for (let index = 0; index < drinkKeys.length; index += 1) {
-      keys.push(drinkKeys[index]) && values.push(drinkValues[index]);
-    }
-    for (let index = 0; index < consumptions.length; index += 1) {
+    n(keys, values, drinkKeys, drinkValues);
+    for (let index = 0; index < keys.length; index += 1) {
       for (let index2 = 0; index2 < keys.length; index2 += 1) {
         if (consumptions[index] === keys[index2]) {
           totalOrder += parseFloat(values[index2]);
@@ -72,6 +81,13 @@ const createMenu = (menu) => {
   };
   return meuRestaurante;
 };
+
+function n(funkeys, funValues, funDrinkKeys, funDrinkValues) {
+  for (let index = 0; index < funDrinkKeys.length; index += 1) {
+    funkeys.push(funDrinkKeys[index]);
+    funValues.push(funDrinkValues[index]);
+  }
+}
 
 // console.log(createMenu({ food: {'coxinha': 3.9, 'sopa': 9.9}, drink: {'agua': 3.9, 'cerveja': 6.9} }));
 // console.log(meuRestaurante.order('coxinha')) //3.9
