@@ -51,8 +51,8 @@ function orderMenu(keys, drinkKeys, values, drinkValues) {
   }
 }
 
+let totalOrder = 0;
 function calculatorOrder(consumptions, keys, values) {
-  let totalOrder = 0;
   for (let index = 0; index < keys.length; index += 1) {
     for (let index2 = 0; index2 < keys.length; index2 += 1) {
       if (consumptions[index] === keys[index2]) {
