@@ -1,25 +1,16 @@
-## Termos de acordos
+### Descrição
 
-Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.
+Este projeto foi desenvolvido durante o período de Curso da Trybe :rocket:
 
-## Boas vindas ao repositório do projeto de ES6 e Testes Unitários!
-
-Você já usa o GitHub diariamente para desenvolver os exercícios, certo? Agora, para desenvolver os projetos, você deverá seguir as instruções a seguir. Atenção a cada passo, e se tiver qualquer dúvida, nos envie por _Slack_! #vqv 🚀
-
-Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir deste repositório, utilizando uma branch específica e um _Pull Request_ para colocar seus códigos.
+O projeto tem por objetivo a avaliação e prática dos conhecimentos adquiridos na Trybe, visando o cumprimento do requisitos solicitados pela mesma.
 
 ---
 
 ## Sumário
 
-- [Termos de acordos](#termos-de-acordos)
-- [Boas vindas ao repositório do projeto de ES6 e Testes Unitários!](#boas-vindas-ao-repositório-do-projeto-de-es6-e-testes-unitários)
-- [Sumário](#sumário)
 - [Habilidades](#habilidades)
-- [Entregáveis](#entregáveis)
   - [O que será desenvolvido](#o-que-será-desenvolvido)
   - [Desenvolvimento](#desenvolvimento)
-  - [Data de entrega](#data-de-entrega)
 - [Instruções para entregar seu projeto:](#instruções-para-entregar-seu-projeto)
   - [Antes de começar a desenvolver:](#antes-de-começar-a-desenvolver)
   - [Durante o desenvolvimento](#durante-o-desenvolvimento)
@@ -36,28 +27,14 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
   - [8. Implemente a função `myCounter`](#8-implemente-a-função-mycounter)
   - [9. Implemente os casos de teste para a função `getCharacter`](#9-implemente-os-casos-de-teste-para-a-função-getcharacter)
   - [10. Implemente a função `createMenu`, bem como seus casos de teste](#10-implemente-a-função-createmenu-bem-como-seus-casos-de-teste)
-- [Depois de terminar o desenvolvimento (opcional)](#depois-de-terminar-o-desenvolvimento-opcional)
-- [Revisando um pull request](#revisando-um-pull-request)
-- [Avisos finais](#avisos-finais)
 
 ---
 
 ## Habilidades
 
-Nesse projeto, você será capaz de:
-
 - Escrever testes unitários para funções utilizando o Jest, um poderoso Framework de Testes em JavaScript, para verificar o correto funcionamento dessas funções;
 - A partir de testes já implementados, escrever funções de forma que elas atendam aos testes propostos;
 - Escrever testes e funções utilizando uma abordagem de desenvolvimento orientado a testes.
-
----
-
-## Entregáveis
-
-Para entregar o seu projeto você deverá criar um Pull Request neste repositório.
-
-Lembre-se que você pode consultar nosso conteúdo sobre
-[Git & GitHub](https://course.betrybe.com/intro/git/) sempre que precisar!
 
 ---
 
@@ -75,14 +52,6 @@ Você implementará várias funções para atender aos requisitos propostos e/ou
   * `npm test` _(executa todos os testes presentes na aplicação)_
   * `npm test path/to/file` _(executa apenas os testes presentes no arquivo path/to/file)_
     * Exemplo: `npm test tests/average.spec.js`
-
----
-
-### Data de entrega
-
-- Projeto individual;
-- Será um dia de projeto;
-- Data de entrega para avaliação final do projeto: `23/11/2021 - 14:00h`
 
 ---
 
@@ -133,13 +102,13 @@ module.exports = average
   * Usando o exemplo anterior: `git push -u origin joaozinho-js-unit-tests`
 
 7. Crie um novo `Pull Request` _(PR)_
-  * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-017-project-js-unit-tests/pulls)
+  * Vá até a página de _Pull Requests_ do repositório no GitHub.
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
   * Clique no botão verde _"Create pull request"_
   * Adicione uma descrição para o _Pull Request_ e clique no botão verde _"Create pull request"_
   * **Não se preocupe em preencher mais nada por enquanto!**
-  * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-017-project-js-unit-tests/pulls) e confira que o seu _Pull Request_ está criado
+  * Volte até a página de _Pull Requests_ do repositório e confira que o seu _Pull Request_ está criado.
 
 ---
 
@@ -429,32 +398,3 @@ A estrutura deste código e deste objeto já foi definida e você irá implement
 
 * Será validado se a função `createMenu` retorna os dados esperados.
 * Será validado se o teste da função `createMenu` verifica cada um dos retornos da função e se estes retornos têm o comportamento esperado.
-
----
-
-## Depois de terminar o desenvolvimento (opcional)
-
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
-
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-017`.
-
-Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
-
-## Revisando um pull request
-
-Use o conteúdo sobre [Code Review](https://course.betrybe.com/real-life-engineer/code-review/) para te ajudar a revisar os _Pull Requests_.
-
-#VQV
-
----
-
-## Avisos finais
-
-Ao finalizar e submeter o projeto, não se esqueça de avaliar sua experiência preenchendo o formulário. Leva menos de 3 minutos!
-
-Link: [FORMULÁRIO DE AVALIAÇÃO DE PROJETO](https://be-trybe.typeform.com/to/ZTeR4IbH)
-
-O avaliador automático não necessariamente avalia seu projeto na ordem em que os requisitos aparecem no readme. Isso acontece para deixar o processo de avaliação mais rápido. Então, não se assuste se isso acontecer, ok?
