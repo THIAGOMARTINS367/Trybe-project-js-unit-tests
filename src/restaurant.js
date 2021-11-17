@@ -51,15 +51,15 @@ function orderMenu(keys, drinkKeys, values, drinkValues) {
   }
 }
 
+let totalOrder = 0;
+let index2 = 0;
+let index3 = 0;
 function partIf(consumptions, keys, values) {
   if (consumptions[index2] === keys[index3]) {
     totalOrder += parseFloat(values[index3]);
   }
 }
 
-let totalOrder = 0;
-let index2 = 0;
-let index3 = 0;
 function calculatorOrder(consumptions, keys, values) {
   for (index2 = 0; index2 < keys.length; index2 += 1) {
     for (index3 = 0; index3 < keys.length; index3 += 1) {
