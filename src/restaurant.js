@@ -51,18 +51,20 @@ function orderMenu(keys, drinkKeys, values, drinkValues) {
   }
 }
 
-let totalOrder = 0;
-function calculatorOrder(consumptions, keys, values) {
-  for (let index = 0; index < keys.length; index += 1) {
-    for (let index2 = 0; index2 < keys.length; index2 += 1) {
-      partIf(consumptions, keys, values, index, index2);
-    }
+function partIf(consumptions, keys, values) {
+  if (consumptions[index2] === keys[index3]) {
+    totalOrder += parseFloat(values[index3]);
   }
 }
 
-function partIf(consumptions, keys, values, index, index2) {
-  if (consumptions[index] === keys[index2]) {
-    totalOrder += parseFloat(values[index2]);
+let totalOrder = 0;
+let index2 = 0;
+let index3 = 0;
+function calculatorOrder(consumptions, keys, values) {
+  for (index2 = 0; index2 < keys.length; index2 += 1) {
+    for (index3 = 0; index3 < keys.length; index3 += 1) {
+      partIf(consumptions, keys, values);
+    }
   }
 }
 
@@ -79,6 +81,8 @@ const createMenu = (menu) => {
     const drinkKeys = Object.keys(meuRestaurante.menu.drink);
     const values = Object.values(meuRestaurante.menu.food);
     const drinkValues = Object.values(meuRestaurante.menu.drink);
+    index2 = 0;
+    index3 = 0;
     orderMenu(keys, drinkKeys, values, drinkValues);
     calculatorOrder(consumptions, keys, values);
     totalOrder += totalOrder * 0.1;
