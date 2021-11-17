@@ -55,10 +55,14 @@ let totalOrder = 0;
 function calculatorOrder(consumptions, keys, values) {
   for (let index = 0; index < keys.length; index += 1) {
     for (let index2 = 0; index2 < keys.length; index2 += 1) {
-      if (consumptions[index] === keys[index2]) {
-        totalOrder += parseFloat(values[index2]);
-      }
+      partIf(consumptions, keys, values, index, index2);
     }
+  }
+}
+
+function partIf(consumptions, keys, values, index, index2) {
+  if (consumptions[index] === keys[index2]) {
+    totalOrder += parseFloat(values[index2]);
   }
 }
 
