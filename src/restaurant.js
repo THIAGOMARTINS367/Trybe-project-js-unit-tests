@@ -60,8 +60,6 @@ function calculatorOrder(consumptions, keys, values) {
       }
     }
   }
-  totalOrder += totalOrder * 0.1;
-  return totalOrder;
 }
 
 const meuRestaurante = {};
@@ -78,7 +76,9 @@ const createMenu = (menu) => {
     const values = Object.values(meuRestaurante.menu.food);
     const drinkValues = Object.values(meuRestaurante.menu.drink);
     orderMenu(keys, drinkKeys, values, drinkValues);
-    return calculatorOrder(consumptions, keys, values);
+    calculatorOrder(consumptions, keys, values);
+    totalOrder += totalOrder * 0.1;
+    return totalOrder;
   };
   return meuRestaurante;
 };
